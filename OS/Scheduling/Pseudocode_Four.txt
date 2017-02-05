@@ -1,0 +1,41 @@
+Scan number of total_process 
+Create three array for scanning process_name[], burst_time[] and calculating waiting_time[] 
+of each process in the process list
+
+String Process_name[total_process]
+Int burst_time[total_process]
+Int waiting_time[total_process]
+
+Set array waiting_time[] to 0
+Set tot_waiting_time to 0
+
+FOR each process in the process list
+	Scan process name and burst time
+END FOR
+
+Scan time_slice of each process
+Set counter = q
+WHILE TRUE
+	Bool flag = false
+	FOR each process in the process list 
+	    IF(burst_time[counter] > 0)
+		IF (burst_time[counter] >= time_slice)
+			waiting_time[counter] = waiting_time[counter-1] + time_slice
+			burst_time[counter] -= time_slice
+		ELSE 
+	        	waiting_time[counter] = waiting_time[counter-1] + burst_time[counter]
+		END IF
+	    flag = true
+	    END IF
+	END FOR
+if(flag == false) 
+END WHILE	
+
+FOR each waiting_time in the array tot_waiting_time[]
+	tot_waiting_time += waiting_time[i] // adding waiting time of each process 
+END FOR
+
+Set average_waiting_time =  tot_waiting_time/total_process
+Print average_waiting_time 
+
+  
