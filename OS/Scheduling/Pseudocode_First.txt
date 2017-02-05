@@ -23,5 +23,3 @@ END FOR
 
 Set average_waiting_time =  tot_waiting_time/total_process
 Print average_waiting_time 
-
-  
