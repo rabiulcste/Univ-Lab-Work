@@ -18,7 +18,7 @@ FOR each waiting_time in the array waiting_time[]
 END FOR
 
 FOR each waiting_time in the array tot_waiting_time[]
-	tot_waiting_time += s[i-1] // adding waiting time of each process 
+	tot_waiting_time += waiting_time[i] // adding waiting time of each process 
 END FOR
 
 Set average_waiting_time =  tot_waiting_time/total_process
