@@ -31,7 +31,7 @@ WHILE TRUE
 if(flag == false) 
 END WHILE	
 
-FOR each waiting_time in the array tot_waiting_time[]
+FOR each waiting_time in the array waiting_time[]
 	tot_waiting_time += waiting_time[i] // adding waiting time of each process 
 END FOR
 
