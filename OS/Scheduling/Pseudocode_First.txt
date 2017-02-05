@@ -17,7 +17,7 @@ FOR each waiting_time in the array waiting_time[]
 	waiting_time[i] = waiting_time[i-1] + burst_time[i] // add current burst time with previous waiting time
 END FOR
 
-FOR each waiting_time in the array tot_waiting_time[]
+FOR each waiting_time in the tot_waiting_time
 	tot_waiting_time += waiting_time[i] // adding waiting time of each process 
 END FOR
 
